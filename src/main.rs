@@ -7,8 +7,7 @@ use tokio::{sync::RwLock, time::sleep};
 use alloy::primitives::{Address, Bytes};
 use multi_block_txns::transaction::TxnManager;
 
-#[tokio::main]
-async fn main() {
+async fn test_multi_block_txns() {
     let gas_key_hex = "af6ecabcdbbfb2aefa8248b19d811234cd95caa51b8e59b6ffd3d4bbc2a6be4c";
     let chain_id = 31337;
     let rpc_url = "http://localhost:8545";
@@ -72,4 +71,9 @@ async fn main() {
             println!("Txn ID: {:#?}, Status: {:#?}", txn_id, status);
         }
     }
+}
+
+#[tokio::main]
+async fn main() {
+    test_multi_block_txns().await;
 }
