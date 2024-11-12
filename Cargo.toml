@@ -1,0 +1,9 @@
+[package]
+name = "lib-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy = { version = "0.4.2", features = ["full"] }
+multi-block-txns = { git = "https://github.com/marlinprotocol/multi-block-txns", branch = "arnav/init" }
+tokio = { version = "1.41.0", features = ["full"] }
